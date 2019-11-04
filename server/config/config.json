@@ -1,0 +1,31 @@
+{
+    "port": 3000,
+    "storageFolder": "./storage",
+    "collectors": {
+        "basic": [
+            {
+                "id": "basic_clock",
+                "command": "node ./src/collectors/time.js",
+                "update": "1",
+                "active": true,
+                "mode": "replace"
+            },
+            {
+                "id": "load",
+                "command": "node ./src/collectors/random.js",
+                "update": "1",
+                "active": true,
+                "mode": "add",
+                "limit": 100
+            }
+        ],
+        "server": [
+            {
+                "id": "computer",
+                "command": "node ./src/collectors/computer.js",
+                "update": "3",
+                "active": true
+            }
+        ]
+    }
+}

@@ -1,0 +1,166 @@
+body,
+html {
+  background: #efefef;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+}
+.container-grid {
+  /* max-width: 1900px; */
+  margin: 20px 20px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+  /*grid-auto-rows: 250px;*/
+  grid-auto-flow: dense;
+}
+
+@media only screen and (max-width: 600px) {
+  .container-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.title-grid {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.nav-link {
+  cursor: pointer;
+}
+
+.icon-big {
+  line-height: 20px;
+  font-size: 3em;
+}
+
+table th {
+  font-size: 0.7rem;
+}
+
+.card-stats {
+  min-height: 100%;
+}
+
+.title {
+  font-size: 36px;
+  line-height: 40px;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #9a9a9a;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 14px;
+  font-weight: 300;
+  color: #9a9a9a;
+  margin-bottom: 0;
+}
+
+.value {
+  font-size: 65px;
+}
+
+.card {
+  box-shadow: 0 4px 20px 3px rgba(0, 0, 0, 0.1);
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h4 {
+  font-size: 22px;
+  line-height: 30px;
+}
+
+.card .card-footer {
+  color: #a9a9a9;
+  background-color: transparent;
+  border-top: none !important;
+  font-size: 14px;
+}
+
+.fa {
+  margin-right: 10px;
+}
+
+.card-body {
+  padding-bottom: 0;
+}
+
+.card {
+  position: relative;
+}
+.card-bg {
+  background-color: #fff;
+  /* background-position: 120px; */
+  /* background-size: contain; */
+  background-repeat: repeat-x;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 70px);
+  opacity: 0.4;
+}
+
+.peity {
+  margin-top: 2em;
+}
+
+.danger-danger {
+  background-color: #222;
+  animation-name: color;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.danger-danger-bg {
+  animation-name: bg-color;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.danger-danger .title,
+.danger-danger .subtitle,
+.danger-danger .stats {
+  animation-name: color;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes color {
+  0% {
+    background-color: #fff;
+  }
+
+  50% {
+    background-color: #f76969;
+    color: #fff;
+  }
+
+  100% {
+    background-color: #fff;
+  }
+}
+
+@keyframes bg-color {
+  0% {
+    background-color: #efefef;
+  }
+  50% {
+    background-color: #f769697a;
+  }
+  100% {
+    background-color: #efefef;
+  }
+}
